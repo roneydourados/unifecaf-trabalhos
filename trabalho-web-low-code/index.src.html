@@ -433,7 +433,7 @@
     position: relative;
     z-index: 1;
     padding: 48px var(--gc-pad) clamp(48px, 8vh, 72px);
-    max-width: min(720px, 100%);
+    max-width: 100%;
     width: 100%;
     animation: gcRise 0.8s ease both;
   }
@@ -471,13 +471,28 @@
     max-width: 38ch;
   }
   .gc-hero-actions {
-    display: flex;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: 12px;
-    flex-wrap: wrap;
+    width: 100%;
   }
   .gc-hero-actions .gc-btn-primary,
   .gc-hero-actions .gc-btn-ghost {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 48px;
     min-height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: auto !important;
+    max-width: 100%;
+    flex: 0 0 auto;
+    margin: 0;
+    white-space: nowrap;
   }
 
   .gc-btn-primary {
@@ -1149,13 +1164,6 @@
     }
     .gc-hero-content { padding-top: 72px; padding-bottom: 64px; }
     .gc-hero-sub { font-size: 1rem; max-width: none; }
-    .gc-hero-actions { width: 100%; }
-    .gc-hero-actions .gc-btn-primary,
-    .gc-hero-actions .gc-btn-ghost {
-      flex: 1 1 auto;
-      justify-content: center;
-      min-width: min(100%, 160px);
-    }
 
     .gc-grid {
       grid-template-columns: 1fr;
@@ -1198,25 +1206,26 @@
     .gc-chat-body { height: min(280px, 42dvh); }
   }
 
-  /* Ajustes só para telemóvel (já cobertos no bloco 900px) */
-  @media (max-width: 768px) {
-    .gc-hero-actions .gc-btn-primary,
-    .gc-hero-actions .gc-btn-ghost {
-      min-width: min(100%, 140px);
+  /* Tablet estreito: os três CTAs podem partir para uma segunda linha */
+  @media (max-width: 720px) {
+    .gc-hero-actions {
+      flex-wrap: wrap;
     }
   }
 
-  /* Smartphone pequeno */
+  /* Smartphone pequeno: uma ação por linha */
   @media (max-width: 480px) {
     .gc-logo { font-size: 1.2rem; }
     .gc-brand { font-size: clamp(2rem, 10vw, 2.5rem); }
     .gc-hero h1 { font-size: 1.15rem; max-width: none; }
     .gc-hero-actions {
       flex-direction: column;
+      align-items: stretch;
     }
     .gc-hero-actions .gc-btn-primary,
     .gc-hero-actions .gc-btn-ghost {
-      width: 100%;
+      width: 100% !important;
+      flex: 1 1 auto;
     }
     .gc-chat-btn-text strong { font-size: 13px; }
     .gc-footer { padding: 28px var(--gc-pad); }

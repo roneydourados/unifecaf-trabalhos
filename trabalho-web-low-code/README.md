@@ -7,7 +7,7 @@ Projeto alinhado ao desafio **Smart Web Experience: Criando uma Experiência Dig
 ## GaleCode
 
 Acesso público à aplicação:
-
+Clique em: 
 **[GaleCode](https://admin:webstudio@trabalho-web-low-code-4jrgy.wstd.io/)**
 
 ## Problema
@@ -63,20 +63,12 @@ Site institucional da **GaleCode** com:
 
 | Ficheiro | Uso |
 | --- | --- |
-| `index.html` | Fragmento **Webstudio-ready** (~42k) — colar no campo Code do HTML Embed |
-| `webstudio-embed.html` | Cópia igual a `index.html` |
-| `preview.html` | Pré-visualização local do fragmento |
+| `webstudio-embed.html` |  Fragmento **Webstudio-ready** (~42k) — colar no campo Code do HTML Embed |
 | `index.src.html` | Fonte legível |
-| `WEBSTUDIO.md` | Instruções de colagem (Client Only + Run scripts) |
 
-## Como testar localmente
+## Como testar
 
-```bash
-# Na pasta do projeto
-python3 -m http.server 8765
-```
-
-Abra [http://localhost:8765](http://localhost:8765).
+Acesse o link: [https://admin:webstudio@trabalho-web-low-code-4jrgy.wstd.io/](https://admin:webstudio@trabalho-web-low-code-4jrgy.wstd.io/).
 
 ### Fluxos sugeridos
 
@@ -90,14 +82,6 @@ Abra [http://localhost:8765](http://localhost:8765).
 2. Inserir **um** bloco Custom Code / Embed / HTML  
 3. Colar **todo** o conteúdo de `index.html` (já está abaixo de 50.000 caracteres)  
 4. Publicar e guardar o **link público** da solução  
-
-## Entregáveis do trabalho (checklist)
-
-- [x] Parte prática — aplicação funcional com HTML/CSS/JS + IA  
-- [x] README com problema, funcionalidades, tecnologias e instruções  
-- [ ] Parte teórica — documento de análise (problema, ferramenta, decisões)  
-- [ ] Vídeo pitch (até 4 min) + link YouTube/Loom/Drive  
-- [ ] Link público da solução publicada  
 
 ## Créditos
 
